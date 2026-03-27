@@ -7,7 +7,14 @@
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=DM+Mono:wght@300;400&display=swap" rel="stylesheet"/>
   <link rel="stylesheet" href="css/style.css"/>
   <link rel="stylesheet" href="css/responsive.css"/>
+  <link rel="icon" type="image/svg+xml" href="images/logo.svg"> 
 </head>
+
+<div class="lightbox" id="lightbox">
+  <button class="lightbox-close" id="lightbox-close">✕</button>
+  <img id="lightbox-img" src="" alt="">
+</div>
+
 <body>
 
   <nav id="navbar">
@@ -124,7 +131,9 @@
     <p class="section-sub">Designed and built a tube guitar amplifier entirely by hand. From the initial schematic to the 3D model, chassis fabrication, wiring, and final soldering.</p>
     <div class="amp-layout">
       <div class="amp-media-grid">
-        <div class="media-placeholder wide"><div class="media-icon">+</div><div class="media-label">images/amp-hero.jpg</div></div>
+        <div class="media-placeholder wide">
+          <img src="images/amp-hero.jpg" alt="Amp front view">
+        </div>
         <div class="media-placeholder"><div class="media-icon">~</div><div class="media-label">Schematic</div></div>
         <div class="media-placeholder"><div class="media-icon">3D</div><div class="media-label">3D render</div></div>
       </div>

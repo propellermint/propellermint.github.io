@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 60 36" fill="none">
+  <!-- A -->
+  <text x="0" y="28"
+    font-family="Georgia, 'Playfair Display', serif"
+    font-size="32"
+    font-style="italic"
+    font-weight="400"
+    fill="#c9a84c"
+    letter-spacing="-1">A</text>
+  <!-- S -->
+  <text x="22" y="28"
+    font-family="Georgia, 'Playfair Display', serif"
+    font-size="32"
+    font-style="italic"
+    font-weight="400"
+    fill="#e8c97a"
+    letter-spacing="-1">S</text>
+  <!-- dot -->
+  <circle cx="54" cy="26" r="3" fill="#d4893a"/>
+</svg>
