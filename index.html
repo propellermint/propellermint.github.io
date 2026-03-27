@@ -126,40 +126,155 @@
   <hr class="divider">
 
   <div class="section-wrap" id="amp">
-    <p class="section-label">02 — Project</p>
-    <h2 class="section-title">Tube guitar amp — built from scratch</h2>
-    <p class="section-sub">Designed and built a tube guitar amplifier entirely by hand. From the initial schematic to the 3D model, chassis fabrication, wiring, and final soldering.</p>
-    <div class="amp-layout">
-      <div class="amp-media-grid">
-        <div class="media-placeholder wide">
-          <img src="images/amp-hero.jpg" alt="Amp front view">
+    <p class="section-label">02 — Projects</p>
+    <h2 class="section-title">Things I've built</h2>
+    <p class="section-sub">Guitar electronics built from scratch — amps, pedals, and clones. Every project designed, wired, and soldered by hand.</p>
+ 
+    <div class="project-switcher">
+ 
+      <button class="proj-btn" id="proj-prev">←</button>
+ 
+      <div class="project-slides" id="project-slides">
+ 
+        <!-- SLIDE 1: Tube Amp -->
+        <div class="project-slide active">
+          <div class="amp-layout">
+            <div class="amp-media-grid">
+              <div class="media-placeholder wide"><div class="media-icon">+</div><div class="media-label">images/amp-hero.jpg</div></div>
+              <div class="media-placeholder"><div class="media-icon">~</div><div class="media-label">Schematic</div></div>
+              <div class="media-placeholder"><div class="media-icon">3D</div><div class="media-label">3D render</div></div>
+            </div>
+            <div class="amp-details">
+              <div class="amp-detail-card">
+                <div class="amp-detail-title">About the build</div>
+                <div class="amp-detail-text">A hand-wired tube amplifier designed from first principles. I drew the schematic, modelled the chassis in 3D, sourced all components, and assembled everything by hand.</div>
+              </div>
+              <div class="amp-detail-card">
+                <div class="amp-detail-title">Specifications</div>
+                <div class="amp-spec-row"><span>Topology</span><span>Class A / AB tube</span></div>
+                <div class="amp-spec-row"><span>Design</span><span>Original schematic</span></div>
+                <div class="amp-spec-row"><span>Chassis</span><span>Custom — 3D modelled</span></div>
+                <div class="amp-spec-row"><span>Wiring</span><span>Hand point-to-point</span></div>
+                <div class="amp-spec-row"><span>Status</span><span>Complete &amp; playing</span></div>
+              </div>
+            </div>
+          </div>
         </div>
-        <div class="media-placeholder"><div class="media-icon">~</div><div class="media-label">Schematic</div></div>
-        <div class="media-placeholder"><div class="media-icon">3D</div><div class="media-label">3D render</div></div>
-      </div>
-      <div class="amp-details">
-        <div class="amp-detail-card">
-          <div class="amp-detail-title">About the build</div>
-          <div class="amp-detail-text">A hand-wired tube amplifier designed from first principles. I drew the schematic, modelled the chassis in 3D, sourced all components, and assembled everything by hand.</div>
+ 
+        <!-- SLIDE 2: Deep Blue Delay -->
+        <div class="project-slide">
+          <div class="amp-layout">
+            <div class="amp-media-grid">
+              <div class="media-placeholder wide"><div class="media-icon">+</div><div class="media-label">images/delay-hero.jpg</div></div>
+              <div class="media-placeholder"><div class="media-icon">~</div><div class="media-label">Schematic</div></div>
+              <div class="media-placeholder"><div class="media-icon">+</div><div class="media-label">Board photo</div></div>
+            </div>
+            <div class="amp-details">
+              <div class="amp-detail-card">
+                <div class="amp-detail-title">About the build</div>
+                <div class="amp-detail-text">Clone of the Mad Professor Deep Blue Delay. PT2399-based analog delay circuit with warm repeats and subtle modulation. Built in a custom enclosure.</div>
+              </div>
+              <div class="amp-detail-card">
+                <div class="amp-detail-title">Specifications</div>
+                <div class="amp-spec-row"><span>Type</span><span>Analog delay</span></div>
+                <div class="amp-spec-row"><span>Chip</span><span>PT2399</span></div>
+                <div class="amp-spec-row"><span>Design</span><span>Clone</span></div>
+                <div class="amp-spec-row"><span>Enclosure</span><span>Custom drilled</span></div>
+                <div class="amp-spec-row"><span>Status</span><span>Complete &amp; in use</span></div>
+              </div>
+            </div>
+          </div>
         </div>
-        <div class="amp-detail-card">
-          <div class="amp-detail-title">Specifications</div>
-          <div class="amp-spec-row"><span>Topology</span><span>Class A / AB tube</span></div>
-          <div class="amp-spec-row"><span>Design</span><span>Original schematic</span></div>
-          <div class="amp-spec-row"><span>Chassis</span><span>Custom — 3D modelled</span></div>
-          <div class="amp-spec-row"><span>Wiring</span><span>Hand point-to-point</span></div>
-          <div class="amp-spec-row"><span>Status</span><span>Complete &amp; playing</span></div>
+ 
+        <!-- SLIDE 3: Fuzz Face -->
+        <div class="project-slide">
+          <div class="amp-layout">
+            <div class="amp-media-grid">
+              <div class="media-placeholder wide"><div class="media-icon">+</div><div class="media-label">images/fuzz-hero.jpg</div></div>
+              <div class="media-placeholder"><div class="media-icon">~</div><div class="media-label">Schematic</div></div>
+              <div class="media-placeholder"><div class="media-icon">+</div><div class="media-label">Board photo</div></div>
+            </div>
+            <div class="amp-details">
+              <div class="amp-detail-card">
+                <div class="amp-detail-title">About the build</div>
+                <div class="amp-detail-text">Classic Fuzz Face circuit. Just two transistors, a handful of passives, and maximum character. Deceptively simple — endlessly tweakable by swapping transistor types.</div>
+              </div>
+              <div class="amp-detail-card">
+                <div class="amp-detail-title">Specifications</div>
+                <div class="amp-spec-row"><span>Type</span><span>Fuzz</span></div>
+                <div class="amp-spec-row"><span>Transistors</span><span>Germanium / Silicon</span></div>
+                <div class="amp-spec-row"><span>Design</span><span>Clone</span></div>
+                <div class="amp-spec-row"><span>Controls</span><span>Fuzz · Volume</span></div>
+                <div class="amp-spec-row"><span>Status</span><span>Complete &amp; in use</span></div>
+              </div>
+            </div>
+          </div>
         </div>
-      </div>
+ 
+        <!-- SLIDE 4: Big Muff -->
+        <div class="project-slide">
+          <div class="amp-layout">
+            <div class="amp-media-grid">
+              <div class="media-placeholder wide"><div class="media-icon">+</div><div class="media-label">images/muff-hero.jpg</div></div>
+              <div class="media-placeholder"><div class="media-icon">~</div><div class="media-label">Schematic</div></div>
+              <div class="media-placeholder"><div class="media-icon">+</div><div class="media-label">Board photo</div></div>
+            </div>
+            <div class="amp-details">
+              <div class="amp-detail-card">
+                <div class="amp-detail-title">About the build</div>
+                <div class="amp-detail-text">EHX Big Muff clone. Four-stage clipping circuit delivering the iconic sustained, mid-scooped fuzz tone. Built to spec with careful transistor matching.</div>
+              </div>
+              <div class="amp-detail-card">
+                <div class="amp-detail-title">Specifications</div>
+                <div class="amp-spec-row"><span>Type</span><span>Fuzz / distortion</span></div>
+                <div class="amp-spec-row"><span>Stages</span><span>4 clipping stages</span></div>
+                <div class="amp-spec-row"><span>Design</span><span>Clone</span></div>
+                <div class="amp-spec-row"><span>Controls</span><span>Volume · Tone · Sustain</span></div>
+                <div class="amp-spec-row"><span>Status</span><span>Complete &amp; in use</span></div>
+              </div>
+            </div>
+          </div>
+        </div>
+ 
+        <!-- SLIDE 5: EQ Pedal -->
+        <div class="project-slide">
+          <div class="amp-layout">
+            <div class="amp-media-grid">
+              <div class="media-placeholder wide"><div class="media-icon">+</div><div class="media-label">images/eq-hero.jpg</div></div>
+              <div class="media-placeholder"><div class="media-icon">~</div><div class="media-label">Schematic</div></div>
+              <div class="media-placeholder"><div class="media-icon">+</div><div class="media-label">Board photo</div></div>
+            </div>
+            <div class="amp-details">
+              <div class="amp-detail-card">
+                <div class="amp-detail-title">About the build</div>
+                <div class="amp-detail-text">Custom graphic equaliser pedal. Active filter bands built around op-amps for precise tone shaping. Designed to sit in the effects loop of the tube amp.</div>
+              </div>
+              <div class="amp-detail-card">
+                <div class="amp-detail-title">Specifications</div>
+                <div class="amp-spec-row"><span>Type</span><span>Active graphic EQ</span></div>
+                <div class="amp-spec-row"><span>Circuit</span><span>Op-amp based</span></div>
+                <div class="amp-spec-row"><span>Design</span><span>Original</span></div>
+                <div class="amp-spec-row"><span>Use</span><span>Effects loop / inline</span></div>
+                <div class="amp-spec-row"><span>Status</span><span>Complete &amp; in use</span></div>
+              </div>
+            </div>
+          </div>
+        </div>
+ 
+      </div><!-- /project-slides -->
+ 
+      <button class="proj-btn" id="proj-next">→</button>
+ 
+    </div><!-- /project-switcher -->
+ 
+    <div class="project-switcher-nav">
+      <span class="proj-counter" id="proj-counter">1 / 5</span>
+      <div class="proj-dots" id="proj-dots"></div>
     </div>
-    <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:0.8rem;margin-top:0.8rem;">
-      <div class="media-placeholder"><div class="media-icon">+</div><div class="media-label">Internals</div></div>
-      <div class="media-placeholder"><div class="media-icon">+</div><div class="media-label">Wiring detail</div></div>
-      <div class="media-placeholder"><div class="media-icon">+</div><div class="media-label">Finished amp</div></div>
-    </div>
+ 
   </div>
 
-  <hr class="divider">
+  <hr class="divider" >
 
   <div class="section-wrap" id="music">
     <p class="section-label">03 — Music</p>
