@@ -512,34 +512,69 @@ nav.scrolled {
 .contact-link span { font-size: 0.78rem; color: var(--text); }
 .contact-link .arrow { color: var(--amber); }
 
-/* ── PROJECT SWITCHER ── */
-.project-switcher {
+
+/* ── CAROUSEL ── */
+.carousel-outer {
+  overflow: hidden;
+  padding: 0 5vw;
   position: relative;
+}
+.carousel-track {
+  display: flex;
+  gap: 1.2rem;
+  transition: transform 0.45s cubic-bezier(0.4,0,0.2,1);
+  will-change: transform;
+}
+.carousel-card {
+  flex: 0 0 85vw;
+  max-width: 1000px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 2px;
+  overflow: hidden;
+  opacity: 0.4;
+  transform: scale(0.97);
+  transition: opacity 0.4s ease, transform 0.4s ease, border-color 0.3s;
+  cursor: pointer;
+}
+.carousel-card.active {
+  opacity: 1;
+  transform: scale(1);
+  border-color: var(--border2);
+}
+.carousel-card .amp-layout {
+  margin: 0;
+}
+.carousel-card .amp-details {
+  padding: 1.8rem 1.8rem 1.8rem 0;
+}
+.carousel-card .amp-media-grid {
+  padding: 1.2rem 0 1.2rem 1.2rem;
+}
+.carousel-nav {
   display: flex;
   align-items: center;
-  gap: 1rem;
+  justify-content: center;
+  gap: 0.8rem;
+  padding: 1.2rem 3rem 0;
+  max-width: 1060px;
+  margin: 0 auto;
 }
-.project-slides {
-  flex: 1;
-  min-width: 0;
-  height: 480px;
-  position: relative;
+.carousel-progress {
+  width: 100px;
+  height: 2px;
+  background: var(--border);
+  border-radius: 2px;
   overflow: hidden;
 }
-.project-slide {
-  display: none;
+.carousel-progress-fill {
   height: 100%;
+  background: var(--amber);
+  border-radius: 2px;
+  transition: width 0.45s ease;
+  width: 20%;
 }
-.project-slide.active {
-  display: block;
-  height: 100%;
-}
-.project-switcher-nav {
-  display: flex;
-  align-items: center;
-  gap: 0.8rem;
-  margin-top: 1rem;
-}
+ 
 .proj-btn {
   flex-shrink: 0;
   width: 40px;
@@ -562,15 +597,11 @@ nav.scrolled {
   color: var(--muted);
   letter-spacing: 0.1em;
   min-width: 36px;
+  text-align: center;
 }
-.proj-dots {
-  display: flex;
-  gap: 0.4rem;
-  align-items: center;
-}
+.proj-dots { display: flex; gap: 0.4rem; align-items: center; }
 .proj-dot {
-  width: 5px;
-  height: 5px;
+  width: 5px; height: 5px;
   border-radius: 50%;
   background: var(--border2);
   cursor: pointer;

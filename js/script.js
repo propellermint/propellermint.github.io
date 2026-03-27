@@ -41,62 +41,53 @@ function setActiveNav() {
   });
 }
 
-/* ── PROJECT SWITCHER ── */
-function initProjectSwitcher() {
-  const slides   = document.querySelectorAll('.project-slide');
+/* ── CAROUSEL ── */
+function initCarousel() {
+  const track    = document.getElementById('carousel-track');
+  const outer    = document.getElementById('carousel-outer');
+  const cards    = track ? track.querySelectorAll('.carousel-card') : [];
   const prevBtn  = document.getElementById('proj-prev');
   const nextBtn  = document.getElementById('proj-next');
   const counter  = document.getElementById('proj-counter');
   const dotsWrap = document.getElementById('proj-dots');
-  const wrapper  = document.querySelector('.project-switcher');
-  if (!slides.length || !prevBtn) return;
-
+  const progress = document.getElementById('proj-progress');
+  if (!cards.length || !prevBtn) return;
+ 
   let current = 0;
   let timer   = null;
-
-  slides.forEach((_, i) => {
+ 
+  cards.forEach((_, i) => {
     const dot = document.createElement('div');
     dot.className = 'proj-dot' + (i === 0 ? ' active' : '');
     dot.addEventListener('click', () => { goTo(i); resetTimer(); });
     dotsWrap.appendChild(dot);
   });
-
-  function goTo(index) {
-    slides[current].classList.remove('active');
+ 
+  function goTo(i) {
+    cards[current].classList.remove('active');
     dotsWrap.children[current].classList.remove('active');
-    current = (index + slides.length) % slides.length; // wraps around
-    slides[current].classList.add('active');
+    current = (i + cards.length) % cards.length;
+    cards[current].classList.add('active');
     dotsWrap.children[current].classList.add('active');
-    counter.textContent = (current + 1) + ' / ' + slides.length;
-    prevBtn.disabled = false;
-    nextBtn.disabled = false;
+    const cardW = cards[0].offsetWidth + 19;
+    track.style.transform = 'translateX(' + (-current * cardW) + 'px)';
+    counter.textContent = (current + 1) + ' / ' + cards.length;
+    progress.style.width = Math.round((current + 1) / cards.length * 100) + '%';
   }
-
-  function startTimer() {
-    timer = setInterval(() => goTo(current + 1), 10000);
-  }
-
-  function stopTimer() {
-    clearInterval(timer);
-    timer = null;
-  }
-
-  function resetTimer() {
-    stopTimer();
-    startTimer();
-  }
-
+ 
+  function startTimer() { timer = setInterval(() => goTo(current + 1), 5000); }
+  function stopTimer()  { clearInterval(timer); timer = null; }
+  function resetTimer() { stopTimer(); startTimer(); }
+ 
   prevBtn.addEventListener('click', () => { goTo(current - 1); resetTimer(); });
   nextBtn.addEventListener('click', () => { goTo(current + 1); resetTimer(); });
-
-  // pause on hover, resume after leaving
-  wrapper.addEventListener('mouseenter', stopTimer);
-  wrapper.addEventListener('mouseleave', startTimer);
-
+  outer.addEventListener('mouseenter', stopTimer);
+  outer.addEventListener('mouseleave', startTimer);
+ 
   goTo(0);
   startTimer();
 }
-
+ 
 /* ── SCROLL ANIMATIONS: fade in sections as they enter view ── */
 function initScrollAnimations() {
   const observer = new IntersectionObserver((entries) => {
@@ -107,20 +98,20 @@ function initScrollAnimations() {
       }
     });
   }, { threshold: 0.1 });
-
+ 
   document.querySelectorAll('.animate-in').forEach(el => observer.observe(el));
 }
-
+ 
 /* ── INIT ── */
 window.addEventListener('scroll', () => {
   updateNav();
   updateHeroFade();
   updateBackToTop();
 });
-
+ 
 document.addEventListener('DOMContentLoaded', () => {
   updateNav();
   setActiveNav();
   initScrollAnimations();
-  initProjectSwitcher();
+  initCarousel();
 });

@@ -129,15 +129,14 @@
     <p class="section-label">02 — Projects</p>
     <h2 class="section-title">Things I've built</h2>
     <p class="section-sub">Guitar electronics built from scratch — amps, pedals, and clones. Every project designed, wired, and soldered by hand.</p>
+  </div>
  
-    <div class="project-switcher">
+  <div class="carousel-outer" id="carousel-outer">
+    <div class="carousel-track" id="carousel-track">
  
-      <button class="proj-btn" id="proj-prev">←</button>
- 
-      <div class="project-slides" id="project-slides">
- 
-        <!-- SLIDE 1: Tube Amp -->
-        <div class="project-slide active">
+      <!-- CARD 1: Tube Amp -->
+      <div class="carousel-card">
+        <div class="carousel-card-body" style="display:block;padding:0;">
           <div class="amp-layout">
             <div class="amp-media-grid">
               <div class="media-placeholder wide"><div class="media-icon">+</div><div class="media-label">images/amp-hero.jpg</div></div>
@@ -146,8 +145,8 @@
             </div>
             <div class="amp-details">
               <div class="amp-detail-card">
-                <div class="amp-detail-title">About the build</div>
-                <div class="amp-detail-text">A hand-wired tube amplifier designed from first principles. I drew the schematic, modelled the chassis in 3D, sourced all components, and assembled everything by hand.</div>
+                <div class="amp-detail-title">Original design · Tube Guitar Amp</div>
+                <div class="amp-detail-text">A hand-wired tube amplifier designed from first principles. Original schematic, 3D-modelled chassis, hand point-to-point wiring. Class A/AB topology.</div>
               </div>
               <div class="amp-detail-card">
                 <div class="amp-detail-title">Specifications</div>
@@ -157,12 +156,19 @@
                 <div class="amp-spec-row"><span>Wiring</span><span>Hand point-to-point</span></div>
                 <div class="amp-spec-row"><span>Status</span><span>Complete &amp; playing</span></div>
               </div>
+              <div class="skills-row">
+                <span class="skill-pill">Original schematic</span>
+                <span class="skill-pill">3D model</span>
+                <span class="skill-pill">Hand wired</span>
+              </div>
             </div>
           </div>
         </div>
+      </div>
  
-        <!-- SLIDE 2: Deep Blue Delay -->
-        <div class="project-slide">
+      <!-- CARD 2: Deep Blue Delay -->
+      <div class="carousel-card">
+        <div class="carousel-card-body" style="display:block;padding:0;">
           <div class="amp-layout">
             <div class="amp-media-grid">
               <div class="media-placeholder wide"><div class="media-icon">+</div><div class="media-label">images/delay-hero.jpg</div></div>
@@ -171,8 +177,8 @@
             </div>
             <div class="amp-details">
               <div class="amp-detail-card">
-                <div class="amp-detail-title">About the build</div>
-                <div class="amp-detail-text">Clone of the Mad Professor Deep Blue Delay. PT2399-based analog delay circuit with warm repeats and subtle modulation. Built in a custom enclosure.</div>
+                <div class="amp-detail-title">Clone · Deep Blue Delay</div>
+                <div class="amp-detail-text">Mad Professor Deep Blue Delay clone. PT2399-based analog delay with warm repeats and subtle modulation. Built in a custom drilled enclosure.</div>
               </div>
               <div class="amp-detail-card">
                 <div class="amp-detail-title">Specifications</div>
@@ -182,12 +188,19 @@
                 <div class="amp-spec-row"><span>Enclosure</span><span>Custom drilled</span></div>
                 <div class="amp-spec-row"><span>Status</span><span>Complete &amp; in use</span></div>
               </div>
+              <div class="skills-row">
+                <span class="skill-pill">PT2399</span>
+                <span class="skill-pill">Analog delay</span>
+                <span class="skill-pill">Clone</span>
+              </div>
             </div>
           </div>
         </div>
+      </div>
  
-        <!-- SLIDE 3: Fuzz Face -->
-        <div class="project-slide">
+      <!-- CARD 3: Fuzz Face -->
+      <div class="carousel-card">
+        <div class="carousel-card-body" style="display:block;padding:0;">
           <div class="amp-layout">
             <div class="amp-media-grid">
               <div class="media-placeholder wide"><div class="media-icon">+</div><div class="media-label">images/fuzz-hero.jpg</div></div>
@@ -196,8 +209,8 @@
             </div>
             <div class="amp-details">
               <div class="amp-detail-card">
-                <div class="amp-detail-title">About the build</div>
-                <div class="amp-detail-text">Classic Fuzz Face circuit. Just two transistors, a handful of passives, and maximum character. Deceptively simple — endlessly tweakable by swapping transistor types.</div>
+                <div class="amp-detail-title">Clone · Fuzz Face</div>
+                <div class="amp-detail-text">Classic two-transistor fuzz. Minimal component count, maximum character. Endlessly tweakable by swapping germanium or silicon transistors.</div>
               </div>
               <div class="amp-detail-card">
                 <div class="amp-detail-title">Specifications</div>
@@ -207,12 +220,19 @@
                 <div class="amp-spec-row"><span>Controls</span><span>Fuzz · Volume</span></div>
                 <div class="amp-spec-row"><span>Status</span><span>Complete &amp; in use</span></div>
               </div>
+              <div class="skills-row">
+                <span class="skill-pill">Fuzz</span>
+                <span class="skill-pill">Germanium</span>
+                <span class="skill-pill">Clone</span>
+              </div>
             </div>
           </div>
         </div>
+      </div>
  
-        <!-- SLIDE 4: Big Muff -->
-        <div class="project-slide">
+      <!-- CARD 4: Big Muff -->
+      <div class="carousel-card">
+        <div class="carousel-card-body" style="display:block;padding:0;">
           <div class="amp-layout">
             <div class="amp-media-grid">
               <div class="media-placeholder wide"><div class="media-icon">+</div><div class="media-label">images/muff-hero.jpg</div></div>
@@ -221,8 +241,8 @@
             </div>
             <div class="amp-details">
               <div class="amp-detail-card">
-                <div class="amp-detail-title">About the build</div>
-                <div class="amp-detail-text">EHX Big Muff clone. Four-stage clipping circuit delivering the iconic sustained, mid-scooped fuzz tone. Built to spec with careful transistor matching.</div>
+                <div class="amp-detail-title">Clone · Big Muff</div>
+                <div class="amp-detail-text">EHX Big Muff clone. Four-stage clipping circuit delivering the iconic sustained, mid-scooped fuzz tone. Careful transistor matching throughout.</div>
               </div>
               <div class="amp-detail-card">
                 <div class="amp-detail-title">Specifications</div>
@@ -232,12 +252,19 @@
                 <div class="amp-spec-row"><span>Controls</span><span>Volume · Tone · Sustain</span></div>
                 <div class="amp-spec-row"><span>Status</span><span>Complete &amp; in use</span></div>
               </div>
+              <div class="skills-row">
+                <span class="skill-pill">Fuzz</span>
+                <span class="skill-pill">4-stage</span>
+                <span class="skill-pill">Clone</span>
+              </div>
             </div>
           </div>
         </div>
+      </div>
  
-        <!-- SLIDE 5: EQ Pedal -->
-        <div class="project-slide">
+      <!-- CARD 5: EQ Pedal -->
+      <div class="carousel-card">
+        <div class="carousel-card-body" style="display:block;padding:0;">
           <div class="amp-layout">
             <div class="amp-media-grid">
               <div class="media-placeholder wide"><div class="media-icon">+</div><div class="media-label">images/eq-hero.jpg</div></div>
@@ -246,8 +273,8 @@
             </div>
             <div class="amp-details">
               <div class="amp-detail-card">
-                <div class="amp-detail-title">About the build</div>
-                <div class="amp-detail-text">Custom graphic equaliser pedal. Active filter bands built around op-amps for precise tone shaping. Designed to sit in the effects loop of the tube amp.</div>
+                <div class="amp-detail-title">Original · EQ Pedal</div>
+                <div class="amp-detail-text">Custom graphic equaliser. Active op-amp filter bands for precise tone shaping. Designed to sit in the effects loop of the tube amp.</div>
               </div>
               <div class="amp-detail-card">
                 <div class="amp-detail-title">Specifications</div>
@@ -257,21 +284,25 @@
                 <div class="amp-spec-row"><span>Use</span><span>Effects loop / inline</span></div>
                 <div class="amp-spec-row"><span>Status</span><span>Complete &amp; in use</span></div>
               </div>
+              <div class="skills-row">
+                <span class="skill-pill">Active EQ</span>
+                <span class="skill-pill">Op-amp</span>
+                <span class="skill-pill">Original</span>
+              </div>
             </div>
           </div>
         </div>
+      </div>
  
-      </div><!-- /project-slides -->
- 
-      <button class="proj-btn" id="proj-next">→</button>
- 
-    </div><!-- /project-switcher -->
- 
-    <div class="project-switcher-nav">
-      <span class="proj-counter" id="proj-counter">1 / 5</span>
-      <div class="proj-dots" id="proj-dots"></div>
     </div>
+  </div>
  
+  <div class="carousel-nav" id="carousel-nav">
+    <button class="proj-btn" id="proj-prev">←</button>
+    <div class="proj-dots" id="proj-dots"></div>
+    <div class="carousel-progress"><div class="carousel-progress-fill" id="proj-progress"></div></div>
+    <span class="proj-counter" id="proj-counter">1 / 5</span>
+    <button class="proj-btn" id="proj-next">→</button>
   </div>
 
   <hr class="divider" >
