@@ -556,7 +556,7 @@ nav.scrolled {
   align-items: center;
   justify-content: center;
   gap: 0.8rem;
-  padding: 1.2rem 3rem 0;
+  padding: 10rem 3rem 0;
   max-width: 1060px;
   margin: 0 auto;
 }
@@ -589,6 +589,7 @@ nav.scrolled {
   cursor: pointer;
   border-radius: 2px;
   transition: border-color 0.3s, background 0.3s;
+  margin: 5rem 0rem;
 }
 .proj-btn:hover { border-color: var(--amber); background: var(--surface2); }
 .proj-btn:disabled { opacity: 0.25; cursor: default; }

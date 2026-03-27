@@ -41,6 +41,33 @@ function setActiveNav() {
   });
 }
 
+/* ── LIGHTBOX ── */
+function initLightbox() {
+  const lightbox      = document.getElementById('lightbox');
+  const lightboxImg   = document.getElementById('lightbox-img');
+  const lightboxClose = document.getElementById('lightbox-close');
+  if (!lightbox) return;
+
+  // open on any img inside .media-placeholder
+  document.querySelectorAll('.media-placeholder img').forEach(img => {
+    img.style.cursor = 'zoom-in';
+    img.addEventListener('click', () => {
+      lightboxImg.src = img.src;
+      lightboxImg.alt = img.alt;
+      lightbox.classList.add('open');
+    });
+  });
+
+  // close on button, backdrop click, or Escape key
+  lightboxClose.addEventListener('click', () => lightbox.classList.remove('open'));
+  lightbox.addEventListener('click', e => {
+    if (e.target === lightbox) lightbox.classList.remove('open');
+  });
+  document.addEventListener('keydown', e => {
+    if (e.key === 'Escape') lightbox.classList.remove('open');
+  });
+}
+
 /* ── CAROUSEL ── */
 function initCarousel() {
   const track    = document.getElementById('carousel-track');
@@ -60,15 +87,15 @@ function initCarousel() {
     const dot = document.createElement('div');
     dot.className = 'proj-dot' + (i === 0 ? ' active' : '');
     dot.addEventListener('click', () => { goTo(i); resetTimer(); });
-    dotsWrap.appendChild(dot);
+    // dotsWrap.appendChild(dot);
   });
  
   function goTo(i) {
     cards[current].classList.remove('active');
-    dotsWrap.children[current].classList.remove('active');
+    // dotsWrap.children[current].classList.remove('active');
     current = (i + cards.length) % cards.length;
     cards[current].classList.add('active');
-    dotsWrap.children[current].classList.add('active');
+    // dotsWrap.children[current].classList.add('active');
     const cardW = cards[0].offsetWidth + 19;
     track.style.transform = 'translateX(' + (-current * cardW) + 'px)';
     counter.textContent = (current + 1) + ' / ' + cards.length;
@@ -113,5 +140,6 @@ document.addEventListener('DOMContentLoaded', () => {
   updateNav();
   setActiveNav();
   initScrollAnimations();
+  initLightbox();
   initCarousel();
 });
